@@ -1,0 +1,459 @@
+.burger {
+    display: none;
+  }
+  
+  @media screen and (max-width: 1300px) {
+    .dashboardpointdet {
+      width: 35%;
+    }
+    .theme {
+      width: 8%;
+    }
+  
+    .line {
+      width: 1.2%;
+    }
+  
+    .search-bar-em1 {
+      width: 15%;
+    }
+  
+    .search-bar-em {
+      width: 11%;
+    }
+  }
+  
+  @media screen and (max-width: 1150px) {
+    .leftside {
+      display: none;
+    }
+  
+    .rightside {
+      width: 100%;
+    }
+  
+    .burger {
+      display: block;
+      padding-right: 20px;
+      display: flex;
+      align-items: center;
+      padding-top: 3px;
+    }
+  
+    .dashboardpointdet {
+      width: 40%;
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .dashboardpointdet {
+      width: 27%;
+      border: dashed 2px #a3aed0;
+    }
+  
+    .theme {
+      width: 10%;
+    }
+  
+    .table-em {
+      overflow-x: scroll;
+      scrollbar-width: none;
+    }
+    .table-em table {
+      width: max-content;
+    }
+  
+    .tablefoot-em {
+      position: fixed;
+      width: 91.2%;
+      border: 1px solid #dddddd;
+    }
+  
+    .sim-em {
+      overflow-x: scroll;
+      scrollbar-width: none;
+    }
+  
+    .search-bar-em1 {
+      width: 17%;
+    }
+  
+    .search-bar-em {
+      width: 13%;
+    }
+  
+    .logo{
+      width: 60%;
+    }
+  
+    .learnmorelogin{
+      width: 33%;
+    }
+  }
+  
+  @media screen and (max-width: 750px) {
+    .dashboardgraph1 {
+      flex-direction: column;
+      align-items: start;
+    }
+  
+    .dashboardgra {
+      height: 100%;
+    }
+    .dashboardpointdet {
+      width: 90%;
+  
+      margin-left: 5%;
+      padding-top: 10px;
+      margin-top: 10px;
+    }
+    .graph1details {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .pointdetail {
+      padding: 0px;
+    }
+  
+    .secondyearcolor {
+      padding-bottom: 15px;
+      padding-top: 0;
+    }
+    .gramain {
+      width: 55%;
+    }
+  
+    .detailedpointbox {
+      width: 42%;
+    }
+  
+    .pointsum {
+      width: 50%;
+      padding-bottom: 10px;
+    }
+  
+    .theme {
+      width: 12%;
+    }
+  
+    .cardff {
+      height: 55px;
+    }
+  
+    .rpline {
+      flex-direction: column;
+      padding-bottom: 20px;
+      height: 70%;
+    }
+  
+    .eligiblerp {
+      display: none;
+    }
+  
+    .rr123 {
+      width: 100%;
+    }
+  
+    .rpcardcontainer {
+      margin-top: 10px;
+    }
+  
+    .resSidehead {
+      width: 100%;
+    }
+  
+    .Reward,
+    .points {
+      font-size: 15px;
+    }
+  
+    .resphoto1 {
+      padding: 50% 0;
+      padding-left: 10%;
+    }
+  
+    .search-bar-em1 {
+      width: 23%;
+    }
+  
+    .search-bar-em {
+      width: 17%;
+    }
+  
+    .noofrow-em {
+      margin-right: 20px;
+    }
+  
+    .eventregdet{
+      width: 70%;
+    }
+    .createeventbutin-team{
+      width: 20%;
+    }
+  
+    .logo{
+      width: 70%;
+    }
+  
+    .learnmorelogin{
+      width: 40%;
+    } 
+  }
+  
+  @media screen and (max-width: 550px) {
+    
+    .mediaquierygogo {
+      display: block;
+      padding-top: 10%;
+    }
+  
+    .loginform {
+      display: none;
+    }
+  
+    .bg {
+      width: 100%;
+    }
+  
+    .logo {
+      width: 65%;
+      height: 50%;
+    }
+  
+    .learnmorelogin {
+      display: none;
+    }
+    .loginmodecontainer {
+      display: none;
+    }
+  
+    .background {
+      border-radius: 0px;
+    }
+    
+    
+    .Dash-em1,
+    .Sefr {
+      display: none;
+    }
+  
+   
+    .em-subtiti {
+      font-size: 28px;
+      font-weight: 600;
+      margin: 0;
+      color: #2b3674;
+    }
+  
+    .resphoto1 {
+      padding: 30% 0;
+      padding-left: 10%;
+    }
+  
+    .ResSidebar {
+      width: 50%;
+    }
+    
+    .resSidehead{
+      width: 90%;
+    }
+  
+    .Reward {
+      font-size: 20px;
+      font-weight: 600;
+      color: #2b3674;
+    }
+  
+    .points {
+      font-size: 20px;
+      font-weight: 600;
+      color: #2b3674;
+      font-style: italic;
+    }
+  
+    .eventregdet{
+      width: 100%;
+    }
+  
+    .createeventbutin-team {
+      width: 30%;
+    }
+  
+  }
+  
+  @media screen and (max-width: 450px) {
+    .pointsum {
+      width: 80%;
+      padding-bottom: 10px;
+    }
+  
+    .Dash-rep-rep {
+      width: 50%;
+    }
+  
+    .theme {
+      width: 20%;
+      padding: 5px;
+    }
+  
+    .dashmain {
+      flex-direction: column;
+    }
+  
+    .detailedpointbox {
+      width: 100%;
+      height: 735px;
+      padding-bottom: 20px;
+      margin-top: 15px;
+    }
+    .dashboardgraph1 {
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: scroll;
+      align-items: start;
+      width: 96%;
+      /* padding-left: 4%; */
+      padding-bottom: 2%;
+    }
+  
+    .graph1details {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .dashboardgra {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .gramain {
+      width: 100%;
+    }
+  
+    .pmain {
+      flex-direction: column;
+    }
+  
+    .dashboardpointdet {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+  
+    .table1,
+    .table2 {
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-items: start;
+    }
+  
+    .table2 {
+      margin-top: 10px;
+    }
+  
+    .points-table table {
+      width: 90%;
+      margin-left: 5%;
+    }
+  
+    .rpline {
+      flex-direction: column;
+      padding-bottom: 20px;
+      height: 90%;
+    }
+  
+    .eligiblerp {
+      display: none;
+    }
+  
+    .rr123 {
+      width: 100%;
+    }
+  
+    .rpcardcontainer {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .cardff {
+      height: 72px;
+    }
+  
+    .ResSidebar {
+      width: 60%;
+    }
+  
+    .resphoto1 img {
+      display: none;
+    }
+  
+    .Reward {
+      font-size: 20px;
+      font-weight: 600;
+      color: #2b3674;
+    }
+  
+    .points {
+      font-size: 20px;
+      font-weight: 600;
+      color: #2b3674;
+      font-style: italic;
+    }
+  
+    .resSidehead {
+      width: 90%;
+    }
+  
+    .eventm-em {
+      display: none;
+    }
+  
+    .Dash-rep-rep {
+      width: 75%;
+    }
+  
+    .search-bar-em1 {
+      display: none;
+    }
+  
+    .search-bar-em {
+      width: 30%;
+      margin: 0;
+      margin-right: 20px;
+    }
+  
+    .eventregdet{
+      width: 100%;
+    }
+  
+    .createeventbutin-team {
+      width: 37%;
+    }
+  
+    .info-row{
+      flex-direction: column;
+      height: 65%;
+    }
+  
+    .myeventregis{
+      align-items: center;
+    }
+  
+    .eventinfobox{
+      overflow-y: scroll;
+      scrollbar-width: none;
+    }
+    .info-column{
+      width: 100%;
+    }
+  
+    .logo {
+      width: 80%;
+      height: 50%;
+    }
+  }
+  
