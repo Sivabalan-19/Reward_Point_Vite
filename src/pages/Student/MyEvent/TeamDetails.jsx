@@ -9,6 +9,7 @@ import { IoMoon } from "react-icons/io5";
 import ResponsiveSide from "../../../components/Sidebar/ResponsiveSidebar.jsx";
 import Notificationpopup from "../../../components/Notificaition/Notificationpopup.jsx";
 import MembersTable from "./AddMember/MembersTable.jsx";
+import { Warning } from "../../../components/AlertPopup/Alert.jsx";
 // import Deptpopup from "./Deptpopup.jsx";
 function TeamDetails({
   goToNextPage,
@@ -124,7 +125,8 @@ function TeamDetails({
   }
   const handleupload = async () => {
     if (!geotag) {
-      alert("Please select a file first!");
+      Warning({message : "Please select a file first!"})
+
       return;
     }
     console.log(geotag);
@@ -170,7 +172,7 @@ function TeamDetails({
     ) {
       goToNextPage();
     } else {
-      alert("Please fill in all required fields.");
+      Warning({message : "Please fill in all required fields."})
     }
   };
   useEffect(() => {

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useMemo, useState } from "react";
 import Table from "../../../components/Table/Table";
+import { Warning } from "../../../components/AlertPopup/Alert";
 
 // import Deptpopup from "./Deptpopup.jsx";
 function CertificateApprove({
@@ -122,7 +123,8 @@ function CertificateApprove({
     ) {
       goToNextPage();
     } else {
-      alert("Please fill in all required fields.");
+      Warning({name:"Please fill in all required fields"})
+      
     }
   };
   useEffect(() => {

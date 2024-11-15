@@ -8,6 +8,7 @@ import Login from "./components/Login/Login";
 import './Styles/Responsive.css';
 import { AuthProvider } from "./utils/Authcontext";
 import ProtectedRoute from "./utils/ProtectedRoute";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -69,6 +70,16 @@ function App() {
           </Routes>
         </Router>
       </AuthProvider>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}    // Auto-close after 5 seconds
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        theme="colored"
+        draggable
+      />
     </div>
   );
 }

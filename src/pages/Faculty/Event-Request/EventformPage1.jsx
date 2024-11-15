@@ -60,7 +60,7 @@ function Eventform1({
     ) {
       goToNextPage();
     } else {
-      alert("Please fill in all required fields.");
+      Warning({message : "Please fill in all required fields."})
     }
   };
 
@@ -109,9 +109,10 @@ function Eventform1({
                     </progress>
                   </div>
                 </div>
-                <div style={{ fontSize: "12px", color: "#0B1437" }}>
+                <div style={{ fontSize: "12px", color: "#0B1437", fontWeight:'600' }}>
                   {" "}
-                  step 1 of 2
+                  
+                  Step 1 of 2
                 </div>
               </div>
             </div>

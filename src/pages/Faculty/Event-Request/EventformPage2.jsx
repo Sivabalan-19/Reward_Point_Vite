@@ -4,6 +4,7 @@ import { TbTrashXFilled } from "react-icons/tb";
 import EventCreated from "../../../components/Facultypopup/EventCreated.jsx";
 import Trashpopup from "../../../components/Facultypopup/Trashpopup.jsx";
 import Notification from "../../../components/Notificaition/Notification.jsx";
+import { Warning } from "../../../components/AlertPopup/Alert.jsx";
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -47,7 +48,7 @@ function Eventform2({
     if (new Date(value) > new Date(formData.startDateTime)) {
       handleFormDataChange({ endDateTime: value });
     } else {
-      alert("End date must be greater than the start date");
+      Warning({message : "End date must be greater than the start date"})
     }
   };
 
@@ -66,7 +67,9 @@ function Eventform2({
     if (new Date(value) > new Date(formData.schedulingStartDateTime)) {
       handleFormDataChange({ schedulingEndDateTime: value });
     } else {
-      alert("Scheduling End Date must be greater than Scheduling Start Date");
+      Warning({message : "Scheduling End Date must be greater than Scheduling Start Date"})
+
+      
     }
   };
 
@@ -88,7 +91,7 @@ function Eventform2({
       setShowCreated(false);
       handDelete();
     } else {
-      alert("Please fill in all required fields.");
+      Warning({message : "Please fill in all required fields."})
     }
   };
 
@@ -137,9 +140,9 @@ function Eventform2({
                     </progress>
                   </div>
                 </div>
-                <div style={{ fontSize: "12px", color: "#0B1437" }}>
+                <div style={{ fontSize: "12px", color: "#0B1437", fontWeight:'600' }}>
                   {" "}
-                  step 2 of 2
+                  Step 2 of 2
                 </div>
               </div>
             </div>

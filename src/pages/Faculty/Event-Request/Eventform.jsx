@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Eventform1 from "./EventformPage1";
 import Eventform2 from "./EventformPage2";
+import { Warning } from "../../../components/AlertPopup/Alert";
 function EventForm({ darkMode, toggleDarkMode }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [file, setfile] = useState();
@@ -66,7 +67,7 @@ function EventForm({ darkMode, toggleDarkMode }) {
   const handleUpload = async () => {
     console.log("uploaded");
     if (!filE) {
-      alert("Please select a file first!");
+      Warning({message : "Please select a file first!"})
       return;
     }
 

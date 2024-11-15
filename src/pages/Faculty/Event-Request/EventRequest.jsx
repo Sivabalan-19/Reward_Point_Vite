@@ -9,6 +9,7 @@ import logo3 from "../../../assets/image3.png";
 import logo4 from "../../../assets/image4.png";
 import Notification from "../../../components/Notificaition/Notification.jsx";
 import Noevent from "../My-event/Noevent.jsx";
+import { Warning } from "../../../components/AlertPopup/Alert.jsx";
 function EventRequest({
   goToNextPage,
   formData,
@@ -150,7 +151,7 @@ function EventRequest({
     ) {
       goToNextPage();
     } else {
-      alert("Please fill in all required fields.");
+      Warning({message : "Please fill in all required fields."})
     }
   };
 
