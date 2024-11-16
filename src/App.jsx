@@ -5,7 +5,7 @@ import Admin_layout from "./components/Layout/AdminLayout";
 import Faculty_Layout from "./components/Layout/FacultyLayout";
 import StudentLayout from "./components/Layout/StudentLayout";
 import Login from "./components/Login/Login";
-import './Styles/Responsive.css';
+import "./Styles/Responsive.css";
 import { AuthProvider } from "./utils/Authcontext";
 import ProtectedRoute from "./utils/ProtectedRoute";
 import { ToastContainer } from "react-toastify";
@@ -32,10 +32,12 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Login />} />
+
+            {/* Faculty Routes */}
             <Route
               path="/faculty/*"
               element={
-                <ProtectedRoute>
+                <ProtectedRoute requiredRole={2}>
                   <Faculty_Layout
                     darkMode={darkMode}
                     toggleDarkMode={toggleDarkMode}
@@ -43,10 +45,12 @@ function App() {
                 </ProtectedRoute>
               }
             />
+
+            {/* Student Routes */}
             <Route
-              path="/Student/*"
+              path="/student/*"
               element={
-                <ProtectedRoute>
+                <ProtectedRoute requiredRole={1}>
                   <StudentLayout
                     darkMode={darkMode}
                     toggleDarkMode={toggleDarkMode}
@@ -54,10 +58,12 @@ function App() {
                 </ProtectedRoute>
               }
             />
+
+            {/* Admin Routes */}
             <Route
               path="/admin/*"
               element={
-                <ProtectedRoute>
+                <ProtectedRoute requiredRole={3}>
                   <Admin_layout
                     darkMode={darkMode}
                     toggleDarkMode={toggleDarkMode}
@@ -66,13 +72,13 @@ function App() {
               }
             />
 
-            <Route path="*" element={<Error404></Error404>} />
+            <Route path="*" element={<Error404 />} />
           </Routes>
         </Router>
       </AuthProvider>
       <ToastContainer
         position="top-center"
-        autoClose={5000}    // Auto-close after 5 seconds
+        autoClose={5000} // Auto-close after 5 seconds
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

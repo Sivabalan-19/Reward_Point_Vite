@@ -1,40 +1,47 @@
-
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(null); // Start with null
-  const [loading, setLoading] = useState(true); // Track loading state
+  const [isAuthenticated, setIsAuthenticated] = useState(null); // Authentication status
+  const [userRole, setUserRole] = useState(localStorage.getItem("UserRole")); // Initialize from localStorage
+  const [loading, setLoading] = useState(true); // Loading state
 
   useEffect(() => {
-    // Simulate async token check (e.g., validate token with API)
     const checkToken = async () => {
-      const token = localStorage.getItem('authToken');
+      const token = localStorage.getItem("authToken");
+
       if (token) {
-        // Here you can add token validation logic, if needed
         setIsAuthenticated(true);
       } else {
         setIsAuthenticated(false);
       }
-      setLoading(false);
+
+      setLoading(false); // Stop loading
     };
 
     checkToken();
   }, []);
 
-  const login = (token) => {
-    localStorage.setItem('authToken', token);
+  const login = (token, userRole) => {
+    localStorage.setItem("authToken", token);
+    localStorage.setItem("UserRole", userRole);
+    setUserRole(userRole); // Update state
     setIsAuthenticated(true);
+    console.log(userRole);
   };
 
   const logout = () => {
-    localStorage.removeItem('authToken');
+    localStorage.removeItem("authToken");
+    localStorage.removeItem("UserRole");
     setIsAuthenticated(false);
+    setUserRole(null);
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, login, logout, loading }}>
+    <AuthContext.Provider
+      value={{ isAuthenticated, userRole, login, logout, loading }}
+    >
       {children}
     </AuthContext.Provider>
   );

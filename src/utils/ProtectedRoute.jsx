@@ -1,17 +1,16 @@
+import React from "react";
+import { Navigate } from "react-router-dom";
+import { useAuth } from "./Authcontext";
 
-import React from 'react';
-import { Navigate } from 'react-router-dom';
-import { useAuth } from './Authcontext';
-
-const ProtectedRoute = ({ children }) => {
-  const { isAuthenticated, loading } = useAuth();
+const ProtectedRoute = ({ children, requiredRole }) => {
+  const { isAuthenticated, userRole, loading } = useAuth();
 
   if (loading) {
-    return <div>Loading...</div>; // Show a loading 
+    return <div>Loading...</div>; // Display a spinner or loader
   }
 
-  if (!isAuthenticated) {
-    return <Navigate to="/" />;
+  if (!isAuthenticated || parseInt(userRole) !== requiredRole) {
+    return <Navigate to="/" />; // Redirect to login if not authenticated or role mismatch
   }
 
   return children;

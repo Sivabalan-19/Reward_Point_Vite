@@ -41,7 +41,7 @@ function Login() {
 
       if (response.data.message === "success" && response.data.position === 1) {
         var fakeToken = response.data.accessToken;
-        login(fakeToken);
+        login(fakeToken,response.data.position);
         ValidLogin({ username: response.data.result.username });
         navigate("/student/dashboard");
       } else if (
@@ -49,7 +49,7 @@ function Login() {
         response.data.position === 2
       ) {
         var fakeToken = response.data.accessToken;
-        login(fakeToken);
+        login(fakeToken,response.data.position);
         ValidLogin({ username: response.data.result.username });
         navigate("/faculty/My-Events");
       } else if (
@@ -57,8 +57,7 @@ function Login() {
         response.data.position === 3
       ) {
         var fakeToken = response.data.accessToken;
-        login(fakeToken);
-        
+        login(fakeToken,response.data.position);
         navigate("/admin/dashboard");
       } else {
         InvalidLogin();

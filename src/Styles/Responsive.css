@@ -283,11 +283,15 @@
   }
   
   @media screen and (max-width: 450px) {
+
     .pointsum {
       width: 80%;
       padding-bottom: 10px;
     }
-  
+    .imageandform, .main
+    {
+      height: 100svh;
+    }
     .Dash-rep-rep {
       width: 50%;
     }
